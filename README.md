@@ -1,9 +1,11 @@
 # winding-cert-lab
 
-**Can this mesh be backface-culled at all?** For 38,400 triangles this tool returns a
-**provably minimal** winding-repair plan (1,024 faces, exact — no smaller plan exists)
-plus a 1-minimal odd-cycle **witness** when no plan exists; the obvious greedy repair
-reports *fewer* flips (960) but leaves 16 edges broken, so it is not a repair at all.
+**Can this mesh be backface-culled at all?** On a 38,400-triangle sphere the certificate
+returns a **provably minimal** winding-repair plan of **6,080** faces; on a 6,144-triangle
+inside-out sphere the exact minimum is **1,024** faces — and there the obvious greedy repair
+reports *fewer* flips (**960**) while leaving 16 edges broken, so it is not a repair at all.
+When no plan exists (a Möbius band) the tool returns a 1-minimal odd-cycle **witness**
+instead of guessing.
 
 * `src/core.mjs` is pure computation (no `three`, no DOM, no I/O, no top-level side effects).
 * Same core runs in node (`bench/verify.mjs`) and in the browser page (`main.js`).
