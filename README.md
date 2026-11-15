@@ -48,7 +48,7 @@ non-manifold fan / degenerate / Möbius ×2 / 38,400-tri sphere / inverted spher
   (`agreesWithCertificate: true`). Six small meshes are *also* checked by a literal O(F²)
   all-pairs scan: 0 disagreements.
 * **Minimality is proved, not asserted** — for every component with ≤20 faces the certificate is
-  checked against an exhaustive 2^k search over all labellings (59 faces covered over 5 corpora,
+  checked against an exhaustive 2^k search over all labellings (59 faces covered over 6 corpora,
   0 mismatches). On the 6,144-triangle inverted sphere the two labellings have sizes 5,120 and
   1,024, so the minimum is 1,024.
 * **The obvious repair is not a repair** — greedy root-first flipping reports **960** flips and
