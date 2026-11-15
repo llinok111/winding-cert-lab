@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>winding-cert-lab · minimal winding-repair certificate</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#0d1117; color:#c9d1d9; display:flex; height:100vh; }
+  #side { width:390px; padding:14px; overflow:auto; border-right:1px solid #21262d; }
+  #view { flex:1; position:relative; }
+  h1 { font-size:14px; margin:0 0 6px; }
+  select,button { font:inherit; background:#161b22; color:#c9d1d9; border:1px solid #30363d; border-radius:6px; padding:5px 8px; margin:2px 0; }
+  button:hover { border-color:#58a6ff; }
+  table { border-collapse:collapse; width:100%; margin-top:8px; }
+  td { padding:2px 4px; border-bottom:1px solid #161b22; }
+  td:last-child { text-align:right; color:#e6edf3; }
+  .warn { color:#f0883e; } .bad { color:#f85149; } .good { color:#3fb950; }
+  #badge { margin-top:10px; padding:8px; border-radius:6px; background:#161b22; border:1px solid #30363d; }
+  #legend { margin-top:10px; font-size:12px; color:#8b949e; }
+  .sw { display:inline-block; width:10px; height:10px; border-radius:2px; vertical-align:middle; margin-right:4px; }
+  #err { color:#f85149; white-space:pre-wrap; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+               "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+  <div id="side">
+    <h1>winding-cert-lab</h1>
+    <div>Minimal winding-repair certificate. The numbers below come from the <em>same</em> <code>src/core.mjs</code> that <code>bench/verify.mjs</code> runs in node.</div>
+    <div style="margin-top:8px">corpus <select id="corpus"></select></div>
+    <div>
+      <button id="apply">apply minimal flip set</button>
+      <button id="reset">reset</button>
+      <button id="wire">wireframe</button>
+    </div>
+    <table id="stats"></table>
+    <div id="badge">computing…</div>
+    <div id="legend">
+      <span class="sw" style="background:#8b949e"></span>consistent
+      <span class="sw" style="background:#f0883e;margin-left:8px"></span>in the minimal flip set
+      <span class="sw" style="background:#f85149;margin-left:8px"></span>non-orientable witness
+    </div>
+    <div id="err"></div>
+  </div>
+  <div id="view"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+{
+ "env": {
+  "node": "v24.19.0",
+  "platform": "linux",
+  "arch": "x64",
+  "date": "2026-11-15"
+ },
+ "coreAnalyze": {
+  "mesh": "sphere-band12",
+  "faces": 38400,
+  "vertices": 19360,
+  "coldMs": 148.105,
+  "min": 74.836,
+  "median": 76.304,
+  "p95": 119.509,
+  "max": 119.509,
+  "stddev": 18.927,
+  "relStddev": 0.2073,
+  "samples": 7
+ },
+ "baselineCensus": {
+  "mesh": "sphere-band12",
+  "what": "baseline/naive.mjs naiveEdgeCensus (independent string-key edge census)",
+  "min": 20.683,
+  "median": 21.382,
+  "p95": 29.402,
+  "stddev": 3.393,
+  "relStddev": 0.1433,
+  "samples": 5,
+  "edgesWalked": 57760,
+  "agreesWithCertificate": true
+ },
+ "minimality": {
+  "mesh": "sphere-inverted88",
+  "greedyFlips": 960,
+  "greedyInconsistentAfter": 16,
+  "certificateMinimumFlips": 1024,
+  "certificateResidual": 0,
+  "note": "a connected orientable component has exactly two consistent labellings (sizes 5120 and 1024); greedy's 960 cannot be one, and it leaves edges broken"
+ },
+ "corpora": {
+  "tetra-2flip": {
+   "vertices": 4,
+   "faces": 4,
+   "inconsistentEdges": 4,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 0,
+   "minConsistencyFlipCount": 2,
+   "chosenFlipCount": 2,
+   "nonOrientableComponents": 0,
+   "witnessFaces": 0,
+   "inconsistentAfterFix": 0,
+   "digest": "3f714a47"
+  },
+  "cube-inverted": {
+   "vertices": 8,
+   "faces": 12,
+   "inconsistentEdges": 0,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 0,
+   "minConsistencyFlipCount": 0,
+   "chosenFlipCount": 12,
+   "nonOrientableComponents": 0,
+   "witnessFaces": 0,
+   "inconsistentAfterFix": 0,
+   "digest": "c430bb7a"
+  },
+  "grid-open-1band": {
+   "vertices": 81,
+   "faces": 128,
+   "inconsistentEdges": 16,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 32,
+   "minConsistencyFlipCount": 16,
+   "chosenFlipCount": 16,
+   "nonOrientableComponents": 0,
+   "witnessFaces": 0,
+   "inconsistentAfterFix": 0,
+   "digest": "a5f61e2e"
+  },
+  "nonmanifold-fan": {
+   "vertices": 25,
+   "faces": 36,
+   "inconsistentEdges": 1,
+   "nonManifoldEdges": 4,
+   "boundaryEdges": 15,
+   "minConsistencyFlipCount": 1,
+   "chosenFlipCount": 1,
+   "nonOrientableComponents": 0,
+   "witnessFaces": 0,
+   "inconsistentAfterFix": 0,
+   "digest": "3031c868"
+  },
+  "degenerate-2faces": {
+   "vertices": 16,
+   "faces": 20,
+   "inconsistentEdges": 0,
+   "nonManifoldEdges": 1,
+   "boundaryEdges": 11,
+   "minConsistencyFlipCount": 0,
+   "chosenFlipCount": 0,
+   "nonOrientableComponents": 0,
+   "witnessFaces": 0,
+   "inconsistentAfterFix": 0,
+   "digest": "90f4743a"
+  },
+  "mobius-small": {
+   "vertices": 8,
+   "faces": 8,
+   "inconsistentEdges": 1,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 8,
+   "minConsistencyFlipCount": 0,
+   "chosenFlipCount": 0,
+   "nonOrientableComponents": 1,
+   "witnessFaces": 8,
+   "inconsistentAfterFix": 1,
+   "digest": "d4da934d"
+  },
+  "mobius": {
+   "vertices": 96,
+   "faces": 144,
+   "inconsistentEdges": 3,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 48,
+   "minConsistencyFlipCount": 0,
+   "chosenFlipCount": 0,
+   "nonOrientableComponents": 1,
+   "witnessFaces": 48,
+   "inconsistentAfterFix": 3,
+   "digest": "3b231eb1"
+  },
+  "sphere-band12": {
+   "vertices": 19360,
+   "faces": 38400,
+   "inconsistentEdges": 320,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 320,
+   "minConsistencyFlipCount": 6080,
+   "chosenFlipCount": 6080,
+   "nonOrientableComponents": 0,
+   "witnessFaces": 0,
+   "inconsistentAfterFix": 0,
+   "digest": "1f46c36e"
+  },
+  "sphere-inverted88": {
+   "vertices": 3136,
+   "faces": 6144,
+   "inconsistentEdges": 64,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 128,
+   "minConsistencyFlipCount": 1024,
+   "chosenFlipCount": 1024,
+   "nonOrientableComponents": 0,
+   "witnessFaces": 0,
+   "inconsistentAfterFix": 0,
+   "digest": "199725ee"
+  },
+  "mixed-3comp": {
+   "vertices": 904,
+   "faces": 1692,
+   "inconsistentEdges": 67,
+   "nonManifoldEdges": 0,
+   "boundaryEdges": 112,
+   "minConsistencyFlipCount": 256,
+   "chosenFlipCount": 268,
+   "nonOrientableComponents": 1,
+   "witnessFaces": 48,
+   "inconsistentAfterFix": 3,
+   "digest": "c0ae5b7b"
+  }
+ }
+}
